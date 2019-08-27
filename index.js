@@ -242,6 +242,8 @@ class App extends Component {
 
         { '必修科目': 33, '選択科目': 48, '自由科目': 45, '合計': 126 }],
     };
+
+    
   }
 
   render() {
