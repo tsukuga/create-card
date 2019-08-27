@@ -7,7 +7,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      Youken:[
+      Youken: [
 
         {
           category1: "専門科目", category2: "-", category3: "必修科目", group: "卒業論文",
@@ -241,15 +241,95 @@ class App extends Component {
         { '必修科目': 0, '選択科目': 0, '自由科目': 0, '合計': 0 },
 
         { '必修科目': 33, '選択科目': 48, '自由科目': 45, '合計': 126 }],
+
+      Result: [{ category1: "専門科目", category2: "-", category3: "必修科目", about: "卒業論文", 科目番号: "BC14908", 科目名: "卒業論文", 単位数: "6.0" }
+        , { category1: "専門科目", category2: "-", category3: "選択科目", about: "BC12群", 科目番号: "BC12131", 科目名: "北アフリカの経済と社会", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "選択科目", about: "BC12群", 科目番号: "BC12561", 科目名: "宇宙開発", 単位数: "1.0" }
+        , { category1: "専門科目", category2: "-", category3: "選択科目", about: "BC12群", 科目番号: "BC12751", 科目名: "都市計画の思想史", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "選択科目", about: "BC12群", 科目番号: "BC12031", 科目名: "統計科学", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "選択科目", about: "BC12群", 科目番号: "BC12431", 科目名: "科学技術史", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "選択科目", about: "BC12群", 科目番号: "BC12701", 科目名: "都市経済学", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "選択科目", about: "BC12群", 科目番号: "BC12291", 科目名: "Social Anthropology(社会人類学)", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "選択科目", about: "BC12群", 科目番号: "BC12444", 科目名: "Cプログラミング", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "選択科目", about: "BC13群", 科目番号: "BC13124", 科目名: "国際学ゼミナールII", 単位数: "3.0" }
+        , { category1: "専門科目", category2: "-", category3: "選択科目", about: "BC13群", 科目番号: "BC13114", 科目名: "国際学ゼミナールI", 単位数: "3.0" }
+        , { category1: "専門科目", category2: "-", category3: "自由科目", about: "BC11,BC12,BC13,BC16,BE22", 科目番号: "BC11431", 科目名: "国際金融論", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "自由科目", about: "BC11,BC12,BC13,BC16,BE22", 科目番号: "BC11851", 科目名: "安全保障論", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "自由科目", about: "BC11,BC12,BC13,BC16,BE22", 科目番号: "BC11881", 科目名: "ジャパニーズ・エコノミー", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "自由科目", about: "BC11,BC12,BC13,BC16,BE22", 科目番号: "BC13311", 科目名: "独立論文", 単位数: "3.0" }
+        , { category1: "専門科目", category2: "-", category3: "自由科目", about: "BC11,BC12,BC13,BC16,BE22", 科目番号: "BC11551", 科目名: "人類学特講", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "自由科目", about: "BC11,BC12,BC13,BC16,BE22", 科目番号: "BC11221", 科目名: "アジアの国際関係", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "自由科目", about: "BC11,BC12,BC13,BC16,BE22", 科目番号: "BC11411", 科目名: "国際貿易論", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "自由科目", about: "BC11,BC12,BC13,BC16,BE22", 科目番号: "BC11731", 科目名: "行政学I", 単位数: "2.0" }
+        , { category1: "専門基礎科目", category2: "-", category3: "必修科目", about: "国際学概論I", 科目番号: "BC50011", 科目名: "国際学概論I", 単位数: "1.0" }
+        , { category1: "専門基礎科目", category2: "-", category3: "必修科目", about: "国際学概論II", 科目番号: "BC50021", 科目名: "国際学概論II", 単位数: "1.0" }
+        , { category1: "専門基礎科目", category2: "-", category3: "必修科目", about: "国際学概論III", 科目番号: "BC50031", 科目名: "国際学概論III", 単位数: "1.0" }
+        , { category1: "専門基礎科目", category2: "-", category3: "必修科目", about: "国際学概論IV", 科目番号: "BC50041", 科目名: "国際学概論IV", 単位数: "1.0" }
+        , { category1: "専門基礎科目", category2: "-", category3: "必修科目", about: "国際学概論V", 科目番号: "BC50051", 科目名: "国際学概論V", 単位数: "1.0" }
+        , { category1: "専門基礎科目", category2: "-", category3: "選択科目", about: "BC51(EDS,EDを除く)", 科目番号: "BC51081", 科目名: "マクロ経済学概論", 単位数: "2.0" }
+        , { category1: "専門基礎科目", category2: "-", category3: "選択科目", about: "BC51(EDS,EDを除く)", 科目番号: "BC51071", 科目名: "国際経済論", 単位数: "2.0" }
+        , { category1: "専門基礎科目", category2: "-", category3: "選択科目", about: "BC51(EDS,EDを除く)", 科目番号: "BC51091", 科目名: "グローバルコミュニケーション論", 単位数: "2.0" }
+        , { category1: "専門基礎科目", category2: "-", category3: "選択科目", about: "BC51(EDS,EDを除く)", 科目番号: "BC51141", 科目名: "情報メディア概論", 単位数: "2.0" }
+        , { category1: "専門基礎科目", category2: "-", category3: "選択科目", about: "BC51(EDS,EDを除く)", 科目番号: "BC51161", 科目名: "Media Politics", 単位数: "2.0" }
+        , { category1: "専門基礎科目", category2: "-", category3: "選択科目", about: "BC51(EDS,EDを除く)", 科目番号: "BC51031", 科目名: "国際関係史序説", 単位数: "2.0" }
+        , { category1: "専門基礎科目", category2: "-", category3: "選択科目", about: "BC51(EDS,EDを除く)", 科目番号: "BC51061", 科目名: "初級ミクロ経済学", 単位数: "2.0" }
+        , { category1: "専門基礎科目", category2: "-", category3: "選択科目", about: "EDS,ED", 科目番号: "BC51541", 科目名: "English Discussion Seminar II", 単位数: "2.0" }
+        , { category1: "専門基礎科目", category2: "-", category3: "選択科目", about: "EDS,ED", 科目番号: "BC51581", 科目名: "English Debate", 単位数: "2.0" }
+        , { category1: "専門基礎科目", category2: "-", category3: "自由科目", about: "BC51,BE21", 科目番号: "BC51111", 科目名: "数理科学I", 単位数: "2.0" }
+        , { category1: "専門基礎科目", category2: "-", category3: "自由科目", about: "BC51,BE21", 科目番号: "BC51124", 科目名: "数理科学II", 単位数: "2.0" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "総合科目I", 科目番号: "1226091", 科目名: "みんなで創ろう「つくばアクションプロジェクト」", 単位数: "1.0" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "総合科目I", 科目番号: "1105202", 科目名: "フレッシュマン・セミナー", 単位数: "1.0" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "総合科目IIA", 科目番号: "1A10121", 科目名: "新時代を拓く研究の最前線II", 単位数: "1.0" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "総合科目IIA", 科目番号: "1A10111", 科目名: "新時代を拓く研究の最前線I", 単位数: "1.0" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "総合科目IIB", 科目番号: "1B17041", 科目名: "経済学入門II", 単位数: "1.0" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "総合科目IIB", 科目番号: "1B01031", 科目名: "言語の万華鏡I", 単位数: "1.0" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "総合科目IIA,IIB,IIC", 科目番号: "1C24191", 科目名: "ストレスとうまくつき合おう", 単位数: "1.0" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "総合科目III", 科目番号: "1F20034", 科目名: "デジタルクリエイティブ基礎", 単位数: "1.0" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "基礎体育", 科目番号: "2123153", 科目名: "基礎体育ダンス(秋)", 単位数: "0.5" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "基礎体育", 科目番号: "2133143", 科目名: "基礎体育ニュースポーツ(春)", 単位数: "0.5" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "応用体育", 科目番号: "2213233", 科目名: "応用体育サッカー(秋)", 単位数: "0.5" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "応用体育", 科目番号: "2213223", 科目名: "応用体育サッカー(春)", 単位数: "0.5" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "発展体育", 科目番号: "2619293", 科目名: "スノースポーツ", 単位数: "1.0" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "第一外国語", 科目番号: "31FB012", 科目名: "異文化と英語II", 単位数: "1.0" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "第一外国語", 科目番号: "31GB012", 科目名: "総合英語II", 単位数: "1.0" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "第一外国語", 科目番号: "31AB012", 科目名: "英語基礎I", 単位数: "0.5" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "第一外国語", 科目番号: "31BB012", 科目名: "異文化と英語I", 単位数: "0.5" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "第一外国語", 科目番号: "31CB012", 科目名: "総合英語I", 単位数: "0.5" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "第二外国語", 科目番号: "3334082", 科目名: "ヨーロッパ文化圏の言語と文化IIBC(フランス語)", 単位数: "1.0" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "第二外国語", 科目番号: "3331012", 科目名: "ヨーロッパ文化圏の言語と文化IIA(フランス語)", 単位数: "0.5" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "第二外国語", 科目番号: "33CB212", 科目名: "フランス語基礎AII", 単位数: "1.0" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "第二外国語", 科目番号: "33EB222", 科目名: "フランス語基礎BII", 単位数: "1.0" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "第二外国語", 科目番号: "33AB212", 科目名: "フランス語基礎AI", 単位数: "0.5" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "第二外国語", 科目番号: "33BB222", 科目名: "フランス語基礎BI", 単位数: "0.5" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "情報", 科目番号: "6105101", 科目名: "情報(講義)", 単位数: "1.0" }
+        , { category1: "基礎科目", category2: "共通科目", category3: "必修科目", about: "情報", 科目番号: "6205203", 科目名: "情報(実習)", 単位数: "1.0" }
+        , { category1: "専門科目", category2: "-", category3: "選択科目", about: "BC12群", 科目番号: "BC12521", 科目名: "水環境論", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "選択科目", about: "BC11,BC16,BE22群", 科目番号: "BC11791", 科目名: "ヨーロッパ社会経済史", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "選択科目", about: "BC11,BC16,BE22群", 科目番号: "BC16011", 科目名: "Mathematical Economics", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "選択科目", about: "BC11,BC16,BE22群", 科目番号: "BC11201", 科目名: "国際通商論", 単位数: "1.0" }
+        , { category1: "専門科目", category2: "-", category3: "選択科目", about: "BC11,BC16,BE22群", 科目番号: "BC11751", 科目名: "公共経済学", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "自由科目", about: "BC11,BC12,BC13,BC16,BE22", 科目番号: "BC11801", 科目名: "現代社会論", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "自由科目", about: "BC11,BC12,BC13,BC16,BE22", 科目番号: "BC11891", 科目名: "Comparative Economics", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "自由科目", about: "BC11,BC12,BC13,BC16,BE22", 科目番号: "BC11981", 科目名: "経済数学", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "自由科目", about: "BC11,BC12,BC13,BC16,BE22", 科目番号: "BC11691", 科目名: "国際紛争論I", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "自由科目", about: "BC11,BC12,BC13,BC16,BE22", 科目番号: "BC11821", 科目名: "スポーツ文化論", 単位数: "2.0" }
+        , { category1: "専門科目", category2: "-", category3: "自由科目", about: "BC11,BC12,BC13,BC16,BE22", 科目番号: "BC11971", 科目名: "基礎経済数学", 単位数: "2.0" }
+        , { category1: "基礎科目", category2: "関連科目", category3: "自由科目", about: "社会・国際学郡共通科目(BA),他学群,他学類,特設自由科目,博物館に関する科目", 科目番号: "FH63051", 科目名: "会計学概論", 単位数: "2.0" }
+        , { category1: "基礎科目", category2: "関連科目", category3: "自由科目", about: "社会・国際学郡共通科目(BA),他学群,他学類,特設自由科目,博物館に関する科目", 科目番号: "AB76351", 科目名: "観光地域論", 単位数: "1.0" }
+        , { category1: "基礎科目", category2: "関連科目", category3: "自由科目", about: "社会・国際学郡共通科目(BA),他学群,他学類,特設自由科目,博物館に関する科目", 科目番号: "8070101", 科目名: "グローバルトレンズ・日本I", 単位数: "1.0" }
+        , { category1: "基礎科目", category2: "関連科目", category3: "自由科目", about: "社会・国際学郡共通科目(BA),他学群,他学類,特設自由科目,博物館に関する科目", 科目番号: "BB41061", 科目名: "現代経済史", 単位数: "2.0" }
+        , { category1: "基礎科目", category2: "関連科目", category3: "自由科目", about: "社会・国際学郡共通科目(BA),他学群,他学類,特設自由科目,博物館に関する科目", 科目番号: "FH32021", 科目名: "経営組織論", 単位数: "2.0" }
+        , { category1: "基礎科目", category2: "関連科目", category3: "自由科目", about: "社会・国際学郡共通科目(BA),他学群,他学類,特設自由科目,博物館に関する科目", 科目番号: "AA21721", 科目名: "グローバル人材養成講義XVIII", 単位数: "1.5" }]
+
     };
 
-    
+
   }
 
   render() {
     return (
       <div>
-        <Hello score={this.state.Youken}/>
+        <Hello score={this.state.Youken} result={this.state.Result} />
       </div>
     );
   }

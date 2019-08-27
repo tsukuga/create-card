@@ -11,20 +11,32 @@ export default class Hello extends Component {
     super(props);
 
     this.state = {
-      Youken: this.props.score
+      Youken: this.props.score,
+      Result: this.props.result
     };
 
   }
 
-  
+
 
   render() {
     return (
 
       <React.Fragment>
-     <Card score={this.state.Youken}/>
-     <Table score={this.state.Youken}/>
-      </React.Fragment>
+
+        <div class="card shadow mb-5">
+          <div class="card-header py-3">
+            <p class="text-primary m-0 font-weight-bold">{category}</p>
+          </div>
+          <div className="card-body" style={{ paddingBottom: 0 + 'px' }}>
+          </div>
+        </div>
+
+
+        <Card score={this.state.Youken} />
+        <Table result={this.state.Result} />
+
+      </React.Fragment >
 
     );
   }
